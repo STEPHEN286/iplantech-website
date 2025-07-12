@@ -67,6 +67,9 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
+      {/* Main Page Title - Hidden visually but accessible to screen readers */}
+      <h1 className="sr-only">iPlantTech - Smart Plant Care Technology</h1>
+      
       {/* Hero Carousel Section */}
       <section className="relative h-[500px] bg-gray-100 overflow-hidden">
         <Swiper
@@ -94,9 +97,9 @@ export default function HomePage() {
               {/* Content Overlay */}
               <div className="relative z-10 flex items-center justify-center h-full">
                 <div className="text-center max-w-4xl mx-auto px-4">
-                  <h1 className="text-4xl md:text-6xl font-heading font-bold text-white mb-4 ">
+                  <h2 className="text-4xl md:text-6xl font-heading font-bold text-white mb-4 ">
                     {slide.title}
-                  </h1>
+                  </h2>
                   <p className="text-xl md:text-2xl text-white mb-4 font-body ">{slide.subtitle}</p>
                   <p className="text-lg text-gray-100 mb-8 font-body max-w-2xl mx-auto ">
                     {slide.description}
