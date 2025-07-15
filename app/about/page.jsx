@@ -2,27 +2,30 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Users, Award, Leaf, Heart } from "lucide-react"
 import Image from "next/image"
+import Meta from "@/components/meta-description";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20">
-        <div className="container grid grid-cols-2  gap-6 place-items-center  mx-auto px-4 ">
-          <div className="max-w-4xl mx-auto ">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              About<span className="text-green-600"> iPlantTech</span>
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              We're  passionate  about helping people discover the joy and benefits of plant parenting.Our mission is to make plant care accessible, enjoyable, and successful for everyone.
-            </p>
-            <button className="bg-green-600 rounded-md p-4 font-medium text-white">
-              join our community
-            </button>
-          </div>
+    <>
+      <Meta title="About | iPlant Tech" description="Learn more about iPlant Tech, our mission, our team, and how we're transforming the future of smart plant care." />
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20">
+          <div className="container grid grid-cols-2  gap-6 place-items-center  mx-auto px-4 ">
+            <div className="max-w-4xl mx-auto ">
+              <h1 className="text-5xl font-bold text-gray-900 mb-6">
+                About<span className="text-green-600"> iPlantTech</span>
+              </h1>
+              <p className="text-xl text-gray-600 mb-8">
+                We're  passionate  about helping people discover the joy and benefits of plant parenting.Our mission is to make plant care accessible, enjoyable, and successful for everyone.
+              </p>
+              <button className="bg-green-600 rounded-md p-4 font-medium text-white">
+                join our community
+              </button>
+            </div>
 
-          <div className="  ">
-          <img src="https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752262906/Image_fx_11_gdqnaf.png" className="h-full w-full rounded-3xl" />
+            <div className="  ">
+          <img src="https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752262906/Image_fx_11_gdqnaf.png" className="h-full w-full rounded-3xl" alt="Team of iPlant Tech working together on smart plant care solutions" />
           </div>
         </div>
       </section>
@@ -111,8 +114,8 @@ export default function AboutPage() {
             <Card className="text-center p-6">
               <CardContent className="pt-6">
                 <img
-                  src="/https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752279665/blank-profile-picture-973460_960_720_drxsoy.png"
-                  alt="Sarah Johnson"
+                  src="https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752279665/blank-profile-picture-973460_960_720_drxsoy.png"
+                  alt="Portrait of Sarah Johnson, Lead Botanist at iPlant Tech"
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold mb-2">Sarah Johnson</h3>
@@ -126,8 +129,8 @@ export default function AboutPage() {
             <Card className="text-center p-6">
               <CardContent className="pt-6">
                 <img
-                  src="/https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752279665/blank-profile-picture-973460_960_720_drxsoy.png"
-                  alt="Mike Chen"
+                  src="https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752279665/blank-profile-picture-973460_960_720_drxsoy.png"
+                  alt="Portrait of Mike Chen, Head Gardener at iPlant Tech"
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold mb-2">Mike Chen</h3>
@@ -142,7 +145,7 @@ export default function AboutPage() {
               <CardContent className="pt-6">
                 <img
                   src="https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752279665/blank-profile-picture-973460_960_720_drxsoy.png"
-                  alt="Emma Davis"
+                  alt="Portrait of Emma Davis, Community Manager at iPlant Tech"
                   className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
                 />
                 <h3 className="text-xl font-semibold mb-2">Emma Davis</h3>
@@ -154,5 +157,6 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

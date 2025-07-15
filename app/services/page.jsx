@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Leaf, Camera, MessageCircle, Calendar, Award } from "lucide-react"
+import Meta from "@/components/meta-description";
 
 const services = [
   {
@@ -60,7 +61,8 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen">
+    <>
+      <Meta title="Repairs | iPlant Tech" description="Need help with your device? iPlant Tech offers professional repair services for smart gardening tools and accessories." />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20">
         <div className="container mx-auto px-4">
@@ -171,6 +173,6 @@ export default function ServicesPage() {
           </Button>
         </div>
       </section>
-    </div>
+    </>
   )
 }

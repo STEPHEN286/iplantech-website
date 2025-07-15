@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Search, Calendar, User, ArrowRight } from "lucide-react"
 import { HeroSection } from "@/components/ui/hero-section"
+import Meta from "@/components/meta-description";
 
 export default function BlogPage() {
   const posts = [
@@ -92,98 +93,100 @@ export default function BlogPage() {
   ]
 
   return (
-    <div className="min-h-screen pt-16">
-      {/* Hero Section */}
-      <HeroSection
-        backgroundImage="https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752280017/FRAME_4_dlzdjn.png"
-        title="Plant Care Blog"
-        description="Expert tips, guides, and insights to help you become the best plant parent you can be"
-        // primaryButton={{
-        //   text: "Browse Articles",
-        //   href: "#featured"
-        // }}
-        // secondaryButton={{
-        //   text: "Subscribe",
-        //   href: "/newsletter"
-        // }}
-        layout="grid"
-        overlayOpacity="bg-green-600/20"
-        height="h-[500px]"
-      >
-       
-      </HeroSection>
+    <>
+      <Meta title="Blog | iPlant Tech" description="Read expert tips, updates, and plant care guides on the iPlant Tech blog. Grow smarter and greener every day." />
+      <div className="min-h-screen pt-16">
+        {/* Hero Section */}
+        <HeroSection
+          backgroundImage="https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752280017/FRAME_4_dlzdjn.png"
+          title="Plant Care Blog"
+          description="Expert tips, guides, and insights to help you become the best plant parent you can be"
+          // primaryButton={{
+          //   text: "Browse Articles",
+          //   href: "#featured"
+          // }}
+          // secondaryButton={{
+          //   text: "Subscribe",
+          //   href: "/newsletter"
+          // }}
+          layout="grid"
+          overlayOpacity="bg-green-600/20"
+          height="h-[500px]"
+        >
+         
+        </HeroSection>
 
-      {/* Categories */}
-      <section className="py-8 border-b">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-wrap gap-2 justify-center">
-            {categories.map((category) => (
-              <Button
-                key={category}
-                variant={category === "All" ? "default" : "outline"}
-                className={category === "All" ? "bg-green-600 hover:bg-green-700" : "hover:bg-green-50"}
-              >
-                {category}
-              </Button>
-            ))}
+        {/* Categories */}
+        <section className="py-8 border-b">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex flex-wrap gap-2 justify-center">
+              {categories.map((category) => (
+                <Button
+                  key={category}
+                  variant={category === "All" ? "default" : "outline"}
+                  className={category === "All" ? "bg-green-600 hover:bg-green-700" : "hover:bg-green-50"}
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Featured Post */}
-      {/* <section className="py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Article</h2>
-          </div>
+        {/* Featured Post */}
+        {/* <section className="py-12">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="mb-8">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Article</h2>
+            </div>
 
-          {posts
-            .filter((post) => post.featured)
-            .map((post) => (
-              <Card key={post.id} className="overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="grid lg:grid-cols-2 gap-0">
-                  <div className="aspect-video lg:aspect-square overflow-hidden">
-                    <img
-                      src={post.image || "/placeholder.svg"}
-                      alt={post.title}
-                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <CardContent className="p-8 flex flex-col justify-center">
-                    <Badge className="w-fit mb-4 bg-green-600">{post.category}</Badge>
-                    <h3 className="text-3xl font-bold mb-4 text-gray-900">{post.title}</h3>
-                    <p className="text-gray-600 mb-6 text-lg">{post.excerpt}</p>
-                    <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
-                      <div className="flex items-center gap-1">
-                        <User className="w-4 h-4" />
-                        <span>{post.author}</span>
-                      </div>
-                      <div className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        <span>{post.date}</span>
-                      </div>
-                      <span>{post.readTime}</span>
+            {posts
+              .filter((post) => post.featured)
+              .map((post) => (
+                <Card key={post.id} className="overflow-hidden hover:shadow-xl transition-shadow">
+                  <div className="grid lg:grid-cols-2 gap-0">
+                    <div className="aspect-video lg:aspect-square overflow-hidden">
+                      <img
+                        src={post.image || "/placeholder.svg"}
+                        alt={post.title}
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
-                    <Link href={`/blog/${post.id}`}>
-                      <Button className="bg-green-600 hover:bg-green-700">
-                        Read Full Article
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </div>
-              </Card>
-            ))}
-        </div>
-      </section> */}
+                    <CardContent className="p-8 flex flex-col justify-center">
+                      <Badge className="w-fit mb-4 bg-green-600">{post.category}</Badge>
+                      <h3 className="text-3xl font-bold mb-4 text-gray-900">{post.title}</h3>
+                      <p className="text-gray-600 mb-6 text-lg">{post.excerpt}</p>
+                      <div className="flex items-center gap-4 text-sm text-gray-500 mb-6">
+                        <div className="flex items-center gap-1">
+                          <User className="w-4 h-4" />
+                          <span>{post.author}</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Calendar className="w-4 h-4" />
+                          <span>{post.date}</span>
+                        </div>
+                        <span>{post.readTime}</span>
+                      </div>
+                      <Link href={`/blog/${post.id}`}>
+                        <Button className="bg-green-600 hover:bg-green-700">
+                          Read Full Article
+                          <ArrowRight className="ml-2 w-4 h-4" />
+                        </Button>
+                      </Link>
+                    </CardContent>
+                  </div>
+                </Card>
+              ))}
+          </div>
+        </section> */}
 
-      {/* Recent Posts */}
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-         <div className="flex justify-between items-center  mb-4  bg-red-600 w-full">
-            
-              <h2 className="text-3xl font-bold text-gray-900">Recent Articles</h2>
-      
+        {/* Recent Posts */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4">
+           <div className="flex justify-between items-center  mb-4  bg-red-600 w-full">
+              
+                <h2 className="text-3xl font-bold text-gray-900">Recent Articles</h2>
+          
 
             <div className="max-w-md relative ">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -248,5 +251,6 @@ export default function BlogPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

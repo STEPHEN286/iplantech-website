@@ -29,10 +29,10 @@ export function Navigation() {
               Home
             </Link>
             <Link
-              href="/products"
+              href="/pricing"
               className="text-gray-700 hover:text-green-600 transition-colors font-body font-medium"
             >
-              Product
+             Pricing
             </Link>
             <Link href="/about" className="text-gray-700 hover:text-green-600 transition-colors font-body font-medium">
               About
@@ -80,6 +80,9 @@ export function Navigation() {
 
             <Link href="/shop" className="text-gray-700 hover:text-green-600 transition-colors font-body font-medium">
               Shop
+            </Link>
+            <Link href="/pricing" className="text-gray-700 hover:text-green-600 transition-colors font-body font-medium">
+              Pricing
             </Link>
           </div>
 
@@ -155,6 +158,13 @@ export function Navigation() {
                     onClick={() => setIsOpen(false)}
                   >
                     Shop
+                  </Link>
+                  <Link
+                    href="/pricing"
+                    className="text-lg font-medium text-gray-700 hover:text-green-600 transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Pricing
                   </Link>
                 </div>
               </SheetContent>

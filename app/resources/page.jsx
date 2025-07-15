@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Download, BookOpen, Video, FileText, ExternalLink } from "lucide-react"
+import Meta from "@/components/meta-description";
 
 const resources = [
   {
@@ -77,7 +78,8 @@ const tools = [
 
 export default function ResourcesPage() {
   return (
-    <div className="min-h-screen">
+    <>
+      <Meta title="Delivery | iPlant Tech" description="Fast and reliable delivery for all iPlant Tech orders. Learn about our shipping options, timelines, and service areas." />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20">
         <div className="container mx-auto px-4">
@@ -246,6 +248,6 @@ export default function ResourcesPage() {
           </div>
         </div>
       </section>
-    </div>
+    </>
   )
 }
