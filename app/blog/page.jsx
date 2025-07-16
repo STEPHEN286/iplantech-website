@@ -183,14 +183,14 @@ export default function BlogPage() {
         {/* Recent Posts */}
         <section className="py-12 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4">
-           <div className="flex justify-between items-center  mb-4  bg-red-600 w-full">
+           <div className="flex justify-between items-center  mb-4  w-full">
               
                 <h2 className="text-3xl font-bold text-gray-900">Recent Articles</h2>
           
 
             <div className="max-w-md relative ">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-          <Input placeholder="Search articles..." className="pl-10 bg-white border-0 shadow-md" />
+          <Input placeholder="Search articles..." className="pl-10 bg-white border-1" />
         </div>
          </div>
 

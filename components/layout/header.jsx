@@ -39,51 +39,47 @@ export function Navigation() {
             </Link>
 
             {/* Resources Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-gray-700 hover:text-green-600 transition-colors font-body font-medium">
+            <div className="relative group">
+              <button className="flex items-center text-gray-700 hover:text-green-600 transition-colors font-body font-medium">
                 Resources
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent >
-                <DropdownMenuItem asChild>
-                  <Link href="/blog">Blog</Link>
-                </DropdownMenuItem>
-                {/* <DropdownMenuItem>
-                  <Link href="/case-studies">Case Studies</Link>
-                </DropdownMenuItem> */}
-                <DropdownMenuItem>
-                  <Link href="/ebooks">E-Books</Link>
-                </DropdownMenuItem>
-                {/* <DropdownMenuItem>
-                  <Link href="/newsletters">Newsletters</Link>
-                </DropdownMenuItem> */}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                <ChevronDown className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform" />
+              </button>
+              <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-1">
+                  <Link href="/blog" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors">
+                    Blog
+                  </Link>
+                  <Link href="/ebooks" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors">
+                    E-Books
+                  </Link>
+                </div>
+              </div>
+            </div>
 
             {/* Service Dropdown */}
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-gray-700 hover:text-green-600 transition-colors font-body font-medium">
+            <div className="relative group">
+              <button className="flex items-center text-gray-700 hover:text-green-600 transition-colors font-body font-medium">
                 Service
-                <ChevronDown className="w-4 h-4 ml-1" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent>
-               
-               
-                <DropdownMenuItem>
-                  <Link href="/maintenance">Repairs</Link>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Link href="/support">Delivery</Link>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
+                <ChevronDown className="w-4 h-4 ml-1 group-hover:rotate-180 transition-transform" />
+              </button>
+              <div className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-1">
+                  <Link href="/maintenance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors">
+                    Repairs
+                  </Link>
+                  <Link href="/support" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-green-600 transition-colors">
+                    Delivery
+                  </Link>
+                </div>
+              </div>
+            </div>
 
             <Link href="/shop" className="text-gray-700 hover:text-green-600 transition-colors font-body font-medium">
               Shop
             </Link>
-            <Link href="/pricing" className="text-gray-700 hover:text-green-600 transition-colors font-body font-medium">
+            {/* <Link href="/pricing" className="text-gray-700 hover:text-green-600 transition-colors font-body font-medium">
               Pricing
-            </Link>
+            </Link> */}
           </div>
 
           {/* Right Side Icons */}
@@ -132,11 +128,11 @@ export function Navigation() {
                     Home
                   </Link>
                   <Link
-                    href="/product"
+                    href="/pricing"
                     className="text-lg font-medium text-gray-700 hover:text-green-600 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
-                    Product
+                    Pricing
                   </Link>
                   <Link
                     href="/about"
@@ -145,26 +141,46 @@ export function Navigation() {
                   >
                     About
                   </Link>
-                  <Link
-                    href="/blog"
-                    className="text-lg font-medium text-gray-700 hover:text-green-600 transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Blog
-                  </Link>
+                 <div className="border-t pt-4">
+                   <div className="text-xs uppercase text-gray-400 mb-2">Resources</div>
+                   <Link
+                     href="/blog"
+                     className="block text-lg font-medium text-gray-700 hover:text-green-600 transition-colors"
+                     onClick={() => setIsOpen(false)}
+                   >
+                     Blog
+                   </Link>
+                   <Link
+                     href="/ebooks"
+                     className="block text-lg font-medium text-gray-700 hover:text-green-600 transition-colors"
+                     onClick={() => setIsOpen(false)}
+                   >
+                     E-Books
+                   </Link>
+                 </div>
+                  <div className="border-t pt-4">
+                    <div className="text-xs uppercase text-gray-400 mb-2">Services</div>
+                    <Link
+                      href="/maintenance"
+                      className="text-lg block font-medium text-gray-700 hover:text-green-600 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Repairs
+                    </Link>
+                    <Link
+                      href="/support"
+                      className="text-lg block font-medium text-gray-700 hover:text-green-600 transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      Delivery
+                    </Link>
+                  </div>
                   <Link
                     href="/shop"
                     className="text-lg font-medium text-gray-700 hover:text-green-600 transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     Shop
-                  </Link>
-                  <Link
-                    href="/pricing"
-                    className="text-lg font-medium text-gray-700 hover:text-green-600 transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Pricing
                   </Link>
                 </div>
               </SheetContent>

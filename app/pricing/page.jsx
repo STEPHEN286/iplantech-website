@@ -68,7 +68,7 @@ export default function PricingPage() {
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-16 px-2">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">Pricing & Plans</h1>
-          <p className="text-xl text-gray-600 mb-4">This subscription is for the Mobile App, not the pods, sensors, or smart monitors.</p>
+          <p className="text-xl text-gray-600 mb-4">App subscription plans.</p>
         </div>
         <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch">
           {plans.map((plan, idx) => {

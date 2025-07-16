@@ -35,7 +35,7 @@ const carouselSlides = [
     id: 2,
     title: "Automated Watering Systems",
     subtitle: "Never Miss a Watering Again",
-    image: "https://res-console.cloudinary.com/dmgt3ctyd/thumbnails/v1/image/upload/v1752262906/SW1hZ2VfZnhfMTBfcm9jZzA1/drilldown",
+    image: "https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752619752/Image_fx_17_ov2uho.png",
     description: "AI-powered irrigation that adapts to your plant's specific needs",
   },
   {
@@ -157,7 +157,7 @@ export default function HomePage() {
                 ref={videoRef}
                 className="w-full h-full object-cover"
                 controls
-                poster="/https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752262906/Image_fx_10_rocg05.png"
+                poster="https://res.cloudinary.com/dmgt3ctyd/image/upload/v1752621032/8753090_mqumej.png"
                 onPlay={() => setIsVideoPlaying(true)}
                 onPause={() => setIsVideoPlaying(false)}
               >
