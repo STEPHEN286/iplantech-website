@@ -2,12 +2,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Users, Award, Leaf, Heart } from "lucide-react"
 import Image from "next/image"
-import Meta from "@/components/meta-description";
+
+export const metadata = {
+  title: "About | iPlant Tech",
+  description: "Learn more about iPlant Tech, our mission, our team, and how we're transforming the future of smart plant care.",
+};
 
 export default function AboutPage() {
   return (
     <>
-      <Meta title="About | iPlant Tech" description="Learn more about iPlant Tech, our mission, our team, and how we're transforming the future of smart plant care." />
       <div className="min-h-screen">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20">

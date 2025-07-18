@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Contact | iPlant Tech",
+  description: "Have questions about plant care? Need help with your order? We're here to help you grow your green family successfully.",
+};
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"

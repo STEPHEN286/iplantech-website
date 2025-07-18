@@ -1,9 +1,12 @@
 "use client"
+// export const metadata = {
+//   title: "iPlant Tech Pricing | Smart Plant Subscription Plans",
+//   description: "Compare Free and Pro subscription plans for the iPlant Tech mobile app. Choose the best smart plant care features for your needs.",
+// };
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Meta from "@/components/meta-description";
 import { CheckCircle, Smartphone, UserPlus } from "lucide-react";
 import { useInView } from "react-intersection-observer";
 import "animate.css";
@@ -61,10 +64,6 @@ export default function PricingPage() {
 
   return (
     <>
-      <Meta
-        title="iPlant Tech Pricing | Smart Plant Subscription Plans"
-        description="Compare Free and Pro subscription plans for the iPlant Tech mobile app. Choose the best smart plant care features for your needs."
-      />
       <div className="min-h-screen bg-gradient-to-br from-green-50 to-emerald-100 py-16 px-2">
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 mb-4">Pricing & Plans</h1>

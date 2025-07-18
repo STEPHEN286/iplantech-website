@@ -5,7 +5,11 @@ import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Search, Calendar, User, ArrowRight } from "lucide-react"
 import { HeroSection } from "@/components/ui/hero-section"
-import Meta from "@/components/meta-description";
+
+export const metadata = {
+  title: "Blog | iPlant Tech",
+  description: "Read expert tips, updates, and plant care guides on the iPlant Tech blog. Grow smarter and greener every day.",
+};
 
 export default function BlogPage() {
   const posts = [
@@ -94,7 +98,6 @@ export default function BlogPage() {
 
   return (
     <>
-      <Meta title="Blog | iPlant Tech" description="Read expert tips, updates, and plant care guides on the iPlant Tech blog. Grow smarter and greener every day." />
       <div className="min-h-screen pt-16">
         {/* Hero Section */}
         <HeroSection

@@ -2,7 +2,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Leaf, Camera, MessageCircle, Calendar, Award } from "lucide-react"
-import Meta from "@/components/meta-description";
+
+export const metadata = {
+  title: "Services | iPlant Tech",
+  description: "Professional plant care services to help your green friends thrive. From consultations to ongoing care, we've got you covered.",
+};
 
 const services = [
   {
@@ -62,7 +66,6 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <Meta title="Repairs | iPlant Tech" description="Need help with your device? iPlant Tech offers professional repair services for smart gardening tools and accessories." />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20">
         <div className="container mx-auto px-4">

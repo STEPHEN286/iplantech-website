@@ -5,7 +5,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Input } from "@/components/ui/input"
 import { Search, Filter, Star, ShoppingCart } from "lucide-react"
 import { HeroSection } from "@/components/ui/hero-section"
-import Meta from "@/components/meta-description";
+
+export const metadata = {
+  title: "Shop | iPlant Tech",
+  description: "Shop smart plant care devices and accessories at iPlant Tech. Easy ordering, secure payments, and fast delivery.",
+};
 
 export default function ShopPage() {
   const products = [
@@ -97,7 +101,6 @@ export default function ShopPage() {
 
   return (
     <>
-      <Meta title="Shop | iPlant Tech" description="Shop smart plant care devices and accessories at iPlant Tech. Easy ordering, secure payments, and fast delivery." />
       <div className="min-h-screen ">
         {/* Hero Section */}
         <HeroSection

@@ -3,12 +3,15 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Download, Star, Users, BookOpen } from "lucide-react"
-import Meta from "@/components/meta-description";
+
+export const metadata = {
+  title: "E-books | iPlant Tech",
+  description: "Download free e-books from iPlant Tech and discover everything you need to know about smart gardening and plant care.",
+};
 
 export default function EbookPage() {
   return (
     <>
-      <Meta title="E-books | iPlant Tech" description="Download free e-books from iPlant Tech and discover everything you need to know about smart gardening and plant care." />
       <div className="min-h-screen pt-16">
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-green-50 to-emerald-100 py-20">
