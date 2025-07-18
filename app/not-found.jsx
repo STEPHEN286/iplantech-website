@@ -58,8 +58,8 @@ export default function NotFound() {
           <div className="mt-12 pt-8 border-t border-gray-200">
             <p className="text-sm text-gray-500 mb-4">Or explore our popular pages:</p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/products" className="text-green-600 hover:text-green-700 font-medium transition-colors">
-                Products
+              <Link href="/pricing" className="text-green-600 hover:text-green-700 font-medium transition-colors">
+                Pricing
               </Link>
               <Link href="/blog" className="text-green-600 hover:text-green-700 font-medium transition-colors">
                 Blog
